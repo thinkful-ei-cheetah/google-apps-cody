@@ -17,7 +17,7 @@ app.get('/apps', (req, res) => {
     if (![ 'rateing','apps'].includes(sort)) {
       return res
         .status(400)
-        .send('sort must be one of title or rank');
+        .send('Sort must be rateing or apps');
     }
   }
   let results = modules.filter(obj => obj.App.toLowerCase().includes(search.toLowerCase()));
