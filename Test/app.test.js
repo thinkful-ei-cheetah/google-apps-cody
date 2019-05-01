@@ -69,23 +69,6 @@ describe('GET / responses', () => {
       .expect(200, expected);
   });
   it('should be the search output and the genres output', () => {
-    const expected = [
-      {
-        'App': 'Temple Run 2',
-        'Category': 'GAME',
-        'Rating': 4.3,
-        'Reviews': '8118609',
-        'Size': '62M',
-        'Installs': '500,000,000+',
-        'Type': 'Free',
-        'Price': '0',
-        'Content Rating': 'Everyone',
-        'Genres': 'Action',
-        'Last Updated': 'July 5, 2018',
-        'Current Ver': '1.49.1',
-        'Android Ver': '4.0 and up'
-      }
-    ];
     return request(app)
       .get('/apps')
       .query({ search:'temple',genres:'Action' })
